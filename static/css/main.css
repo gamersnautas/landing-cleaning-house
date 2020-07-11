@@ -80,3 +80,15 @@ footer a, footer a:hover{
     color: white;
     text-decoration: none;
 }
+
+.bg-puppy{
+    background-image: url(../img/bg-puppy.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100%
+}
+
+.bg-overlay{
+    background-color: rgba(20, 20, 20, .4);
+}

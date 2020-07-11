@@ -7,7 +7,7 @@ def index(request):
     if request.method == 'POST':
         zipcode = request.POST.get('zipcode')
         
-        if ZipCodes.objects.filter(zipcode = zipcode).exists():
+        if ZipCodes.objects.filter(zipcode__contains=zipcode).exists():
             return redirect('check/')
         
         else:
@@ -28,9 +28,4 @@ def check(request):
 def check_yes(request):
     return render(request, 'check.html', {
         'check_yes': True
-    })
-
-def policy(request):
-    return render(request, 'check.html', {
-        'policy': True
     })

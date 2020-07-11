@@ -25,5 +25,4 @@ urlpatterns = [
     path('index/', views.index, name='index'),
     path('check/', views.check, name="check"),
     path('check/yes', views.check_yes, name="check_yes"),
-    path('policy/', views.policy, name="policy")
 ] +static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
