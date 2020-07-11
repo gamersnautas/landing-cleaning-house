@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+    <section id="home">
+        <div class="container h-100">
+            <div class="row justify-content-center align-items-center h-100">
+                <div class="col-10 col-md-8">
+                    <div class="caption">
+                        {% if form %}
+                        <h2 class="text-center">Welcome to the best site for the home services</h2>
+                        <h4 class="text-center mt-3">Find out if we cover your area</h4>
+                        <form action="" method="POST">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                {{ form.zipcode.label_tag }}
+                                {{ form.zipcode }}
+                                <button type="submit" class="btn btn-primary btn-lg mt-2">Check me</button>
+                            </div>
+                        </form>
+                        {% endif %}
+                        {% if uncover %}
+                            <h2 class="text-center">Sorry, but we don't currently serve your area.</h2>
+                            <div class="text-center">
+                                <a href="https://www.facebook.com/bhomeimprovements/" class="btn btn-primary btn-lg mt-3">Back to Facebook</a>
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

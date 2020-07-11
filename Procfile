@@ -1,0 +1,1 @@
+web: gunicorn landing_cleaning_products.wsgi --log-file -

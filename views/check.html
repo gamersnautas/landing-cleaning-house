@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <section id="home">
+        <div class="container h-100">
+            <div class="row justify-content-center align-items-center h-100">
+                <div class="col-10 col-md-8">
+                    <div class="caption">
+                        {% if check %}
+                        <h2 class="text-center">Congratulation - we do cover your area.</h2>
+                        <h4 class="text-center mt-3">Would you like to get a quote now?</h4>
+                        <div class="align-items-center text-center mt-4 justify-content-between">
+                            <a href="/check/yes" class="btn btn-primary btn-lg mr-4">Si</a>
+                            <a href="https://www.facebook.com/bhomeimprovements/" class="btn btn-secondary btn-lg text-black">No</a>
+                        </div>
+                        {% endif %}
+                        {% if check_yes %}
+                        <h4 class="text-center mb-3">Give us a call on our toll free line on 888-708-5629.</h4>
+                        <h5 class="text-center">Or you can call us making click on the button of below</h5>
+                        <div class="text-center">
+                            <a href="tel:888-708-5629" class="btn btn-primary btn-lg mt-3">Get quote now</a>
+                        </div>
+                        {% endif %}
+                        {% if policy %}
+                            <h3 class="text-center mb-3">We respect your privacy, we will not share your details with anyone. We store your information for upto 90 days before deleting it.</h3>
+                            <h4 class="text-center">Remember that you can contact us through 888-708-5629</h4>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
