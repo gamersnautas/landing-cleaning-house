@@ -16,6 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from . import views
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -24,4 +26,4 @@ urlpatterns = [
     path('check/', views.check, name="check"),
     path('check/yes', views.check_yes, name="check_yes"),
     path('policy/', views.policy, name="policy")
-]
+] +static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
