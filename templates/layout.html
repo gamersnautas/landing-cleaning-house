@@ -11,9 +11,16 @@
 </head>
 
 <body>
+    <section id="home">
+        <div class="bg-puppy h-100">
+            <div class="bg-overlay h-100">
+            
+            {% block content %}
+            {% endblock %}
 
-    {% block content %}
-    {% endblock %}
+            </div>
+        </div>
+    </section>
 
     <footer>
         <div class="container">

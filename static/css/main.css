@@ -47,11 +47,17 @@ body{
     background-color: var(--secondary);
 }
 
-.btn-secondary, .btn-secondary:hover{
+.btn-secondary{
     border: 1px solid var(--secondary);
     border-radius: .8rem;
     background-color: white;
+}
+
+.btn-secondary:hover, .btn-secondary:focus{
+    background-color: #dddad5!important;
+    border-color: #dddad5!important;
     box-shadow: 0 0 0 0.2rem rgba(245, 241, 234, .5)!important;
+
 }
 
 .btn-secondary:active{
