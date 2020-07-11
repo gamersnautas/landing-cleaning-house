@@ -24,8 +24,3 @@ def check(request):
     return render(request, 'check.html', {
         'check': True
     })
-
-def check_yes(request):
-    return render(request, 'check.html', {
-        'check_yes': True
-    })
